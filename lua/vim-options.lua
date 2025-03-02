@@ -26,3 +26,4 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', { noremap = true, sil
 vim.cmd([[
 command! -nargs=1 Cd execute 'cd /home/tharun/' . <q-args>
 ]])
+
