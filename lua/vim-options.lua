@@ -20,3 +20,5 @@ vim.wo.number = true
 vim.keymap.set('v', '<C-]>', '>gv', { noremap = true, silent = true })  -- Indent
 vim.keymap.set('v', '<C-[>', '<gv', { noremap = true, silent = true })  -- Unindent
 
+vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', { noremap = true, silent = true })
+
