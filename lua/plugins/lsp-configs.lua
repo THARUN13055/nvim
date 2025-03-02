@@ -55,7 +55,7 @@ return {
         "terraformls",
         "tflint",
         "yamlls",
-        "tsserver",
+        "ts_ls",
         "eslint",
         "rust_analyzer",
         "kotlin_language_server",
