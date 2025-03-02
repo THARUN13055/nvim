@@ -15,3 +15,8 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
+
+-- VS Code-like indentation: Ctrl + ] (indent) and Ctrl + [ (unindent)
+vim.keymap.set('v', '<C-]>', '>gv', { noremap = true, silent = true })  -- Indent
+vim.keymap.set('v', '<C-[>', '<gv', { noremap = true, silent = true })  -- Unindent
+
