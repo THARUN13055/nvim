@@ -22,3 +22,7 @@ vim.keymap.set('v', '<C-[>', '<gv', { noremap = true, silent = true })  -- Unind
 
 vim.api.nvim_set_keymap('n', '<leader>t', ':terminal<CR>', { noremap = true, silent = true })
 
+-- Override the :cd command to prepend the global path
+vim.cmd([[
+command! -nargs=1 Cd execute 'cd /home/tharun/' . <q-args>
+]])
