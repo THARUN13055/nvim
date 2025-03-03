@@ -33,3 +33,5 @@ vim.keymap.set('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
 -- Close the current window normally (save and quit)
 vim.keymap.set('n', '<C-S-q>', ':wq<CR>', { noremap = true, silent = true })
 
+vim.keymap.set("n", "<leader>ff", ":!gofmt -w %<CR><CR>")
+vim.keymap.set("n", "<leader>pp", ":!prettier -w %<CR><CR>")
