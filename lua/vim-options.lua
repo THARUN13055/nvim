@@ -27,3 +27,9 @@ vim.cmd([[
 command! -nargs=1 Cd execute 'cd /home/tharun/' . <q-args>
 ]])
 
+-- Close the current window with unsaved changes (force quit)
+vim.keymap.set('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
+
+-- Close the current window normally (save and quit)
+vim.keymap.set('n', '<C-S-q>', ':wq<CR>', { noremap = true, silent = true })
+
