@@ -22,14 +22,10 @@ return {
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
       vim.keymap.set("n", "<leader><leader>", builtin.oldfiles, {})
 
-      -- Custom mapping for vertical split
-      vim.keymap.set("n", "<C-v>", function()
-        -- Open Telescope in a vertical split on the right
-        vim.cmd("set splitright")
-        builtin.find_files({ layout_strategy = "vertical", layout_config = { width = 0.5 } })
-      end, { desc = "Find files in vertical split" }) 
-      
-      --Autocommands for Telescope
+      -- Load the ui-select extension
+      require("telescope").load_extension("ui-select")
+
+      -- Autocommands for Telescope
       vim.api.nvim_create_augroup("TelescopeAutocommands", { clear = true })
 
       -- Example: Open Telescope find_files when entering a buffer
