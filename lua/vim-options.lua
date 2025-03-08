@@ -29,4 +29,5 @@ command! -nargs=1 Cd execute 'cd /home/tharun/' . <q-args>
 
 -- Close the current window with unsaved changes (force quit)
 vim.keymap.set('n', '<C-q>', ':q!<CR>', { noremap = true, silent = true })
-
+vim.keymap.set("n", "<leader>ff", ":!gofmt -w %<CR><CR>")
+vim.keymap.set("n", "<leader>pp", ":!prettier -w %<CR><CR>")
